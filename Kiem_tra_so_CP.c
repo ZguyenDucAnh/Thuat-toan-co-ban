@@ -1,39 +1,37 @@
 //Thuat toan kiem tra so chinh phuong
 #include <stdio.h>
-#include <stdbool.h>
 #include <math.h>
-bool soCP(int n)
+int soCP(int n)
 {
 	int sqr = sqrt(n);
-    if(sqr*sqr == n)
+	if(sqr*sqr == n)
 	{
-        return true;
-    }
-    else
+		return 1;
+	}
+	else
 	{
-		return false;	
-	} 
+		return 0;
+	}
 }
 
 int main()
 {
-	int n;
-	printf("\nNhap size: ");
-	scanf("%d",&n);
-	
-	int a[n];
-	for(int i = 0; i<n; i++)
+	int n,i;
+	do
 	{
-		printf("\nNhap a[%d]: ",i);
-		scanf("%d",&a[i]);
+		printf("\nNhap n= ");
+		scanf("%d",&n);
 	}
+	while(n<=0);
+
+
 	printf("\nOUTPUT: ");
-	
-	for(int  i = 0; i<n; i++)
+
+	for(i = 0; i<n; i++)
 	{
-		if(soCP(a[i]))
+		if(soCP(i))
 		{
-			printf("%d ", a[i]);
+			printf("%d ", i);
 		}
 	}
 	return 0;
